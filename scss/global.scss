@@ -1,0 +1,72 @@
+@use 'variables-mixins' as *;
+
+// Fonts text
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+// Fonts title restaurant
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap');
+
+
+
+// Global
+* {
+    box-sizing: border-box;
+}
+
+.loader-container {
+    position: fixed;
+    inset: 0;
+    background: $bg-sec-color;
+    @include flex-center-rows;
+    z-index: 5;
+    animation: disappear 0.3s ease-in-out 2s forwards;
+    .loader {
+        width: 3rem;
+        height: 3rem;
+        background: $maincolor;
+        opacity: 0.5;
+        border: 3px solid $bg-prim-color;
+        border-top: 3px solid $like-border;
+        border-radius: 100%;
+        animation: spin 2s linear infinite;
+    }
+}
+.main-global {
+    opacity: 0;
+    animation: showBody 0.3s ease-in-out 2s forwards;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    a {
+        text-decoration: none;
+    }
+}
+
+// Footer
+.main-footer {
+    background: $footer-color;
+    padding: 1.6rem;
+    &__logo {
+        color:$bg-sec-color;
+        width: 8.5rem;
+        height: auto;
+    }
+    &__nav {
+        height: 100%;
+        margin-top: 1rem;
+        &__icon {
+            width: 1rem;
+        }
+    }
+    &__nav__content {
+        color: $bg-sec-color;
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        &__txt {
+            margin-block: 0.3rem;
+        }
+    }
+}

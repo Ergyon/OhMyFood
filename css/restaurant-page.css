@@ -1,0 +1,478 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@keyframes showBody {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fallingTop {
+  0% {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(-30%);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateY(-10%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu__wrapper > .menu__check-wrapper:nth-child(1) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 0s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(2) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 0.4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(3) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 0.8s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(4) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 1.2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(5) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 1.6s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(6) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(7) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 2.4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(8) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 2.8s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(9) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 3.2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(10) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 3.6s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(11) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(12) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4.4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(13) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4.8s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(14) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 5.2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(15) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 5.6s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  animation: disappear 0.3s ease-in-out 2s forwards;
+}
+.loader-container .loader {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  opacity: 0.5;
+  border: 3px solid rgb(255, 255, 255);
+  border-top: 3px solid rgb(147, 86, 220);
+  border-radius: 100%;
+  animation: spin 2s linear infinite;
+}
+
+.main-global {
+  opacity: 0;
+  animation: showBody 0.3s ease-in-out 2s forwards;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+
+.main-footer {
+  background: rgb(53, 53, 53);
+  padding: 1.6rem;
+}
+.main-footer__logo {
+  color: rgb(246, 246, 246);
+  width: 8.5rem;
+  height: auto;
+}
+.main-footer__nav {
+  height: 100%;
+  margin-top: 1rem;
+}
+.main-footer__nav__icon {
+  width: 1rem;
+}
+.main-footer__nav__content {
+  color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-footer__nav__content__txt {
+  margin-block: 0.3rem;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 1rem;
+  position: relative;
+}
+.header-container__backbtn {
+  position: absolute;
+  left: 1rem;
+  cursor: pointer;
+}
+.header-container__img {
+  width: 12.3rem;
+  height: 2.25rem;
+}
+
+.img-wrapper {
+  z-index: -1;
+  height: 19rem;
+  position: relative;
+}
+.img-wrapper__img {
+  display: block;
+  width: 100%;
+  max-height: 383px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main-container {
+  background: rgb(246, 246, 246);
+  margin-top: -3rem;
+  border-radius: 55px 55px 0px 0px;
+  padding: 1rem;
+  z-index: 2;
+  position: relative;
+}
+.main-container__headline {
+  display: flex;
+  align-items: center;
+}
+.main-container__headline__title {
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-size: 1.9rem;
+  margin-left: 0.5rem;
+}
+.main-container__headline__like {
+  position: absolute;
+  right: 3rem;
+  font-size: 1.7rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+.main-container__headline__like:hover {
+  transform: scale(95%);
+}
+.main-container__headline__like::before {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 400;
+  content: "\f004";
+  display: inline-block;
+  color: rgb(147, 86, 220);
+}
+.main-container__headline__like__input:checked + .main-container__headline__like::before {
+  font-weight: 900;
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.menu {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+.menu__title {
+  font-weight: 300;
+  margin: 0;
+  display: flex;
+}
+.menu__title--underline {
+  width: 3rem;
+  height: 0.2rem;
+  background: rgb(153, 226, 208);
+  margin-top: 0.3rem;
+}
+.menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 639px;
+  height: auto;
+  padding-block: 1rem;
+}
+.menu__check-wrapper {
+  position: relative;
+}
+.menu__check-wrapper .menu__label {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: 20px;
+  transition: 0.2s ease-in;
+}
+.menu__check-wrapper .menu__label:hover {
+  cursor: pointer;
+  box-shadow: rgba(255, 255, 255, 0.795) 0px 2px 80px -1px, rgba(51, 50, 50, 0.4) 0px 1px 10px -1px;
+}
+.menu__card {
+  background: rgb(255, 255, 255);
+  border-radius: 20px;
+  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+  height: 4.3rem;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+  gap: 1rem;
+  position: relative;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.menu__card__content {
+  padding-inline: 1rem;
+  margin-block: 1rem;
+  min-width: 0;
+}
+.menu__card__title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card__subtitle {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  padding-top: 0.3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__card__price {
+  color: rgb(53, 53, 53);
+  font-weight: 700;
+  width: 1.1rem;
+  margin-left: auto;
+  transition: all 0.3s ease-out;
+}
+.menu__card__check {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: rgb(153, 226, 208);
+  background-image: url(../icons/Check.svg);
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 4rem;
+  border-radius: 0 20px 20px 0;
+  opacity: 0;
+  transform: translateX(20%);
+  transition: all 0.3s ease-out;
+}
+.menu input[type=checkbox]:checked + .menu__label + .menu__card .menu__card__check {
+  width: 4rem;
+  opacity: 1;
+  transform: translateX(0);
+}
+.menu input[type=checkbox]:checked + .menu__label + .menu__card .menu__card__price {
+  margin-right: 4rem;
+}
+
+.btn-wrapper {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.btn-wrapper .btn {
+  height: 3.5rem;
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 30px;
+  box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+  width: 12.5rem;
+  transition: 200ms;
+}
+.btn-wrapper .btn:hover {
+  cursor: pointer;
+  width: 12.7rem;
+  opacity: 0.8;
+  font-size: 1.04rem;
+}
+
+@media (min-width: 500px) {
+  .main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-inline: 10%;
+    margin-block: 0;
+  }
+  .main-container__headline__like {
+    right: 2rem;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    padding: 1rem;
+    height: 90px;
+  }
+  .main-footer__logo {
+    width: 6rem;
+    margin-inline: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+  .main-footer__nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    padding-right: 2rem;
+  }
+  .main-footer__nav__content {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+}
+@media (min-width: 1024px) {
+  .main-container__headline__like {
+    right: 14rem;
+  }
+  .main-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding: 1rem;
+    height: 90px;
+  }
+  .main-footer__logo {
+    width: 6.5rem;
+    margin-inline: 1rem;
+  }
+  .main-footer__nav {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+    padding-left: 40%;
+  }
+  .main-footer__nav__content {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+}/*# sourceMappingURL=restaurant-page.css.map */

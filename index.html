@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <title>OhMyFood</title>
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="loader-container">
+        <div class="loader"></div>
+    </div>
+      
+    <main class="main-global">
+    <!-- Header -->
+        <header class="header-container">
+            <img class="header-container__img" src="images/logo/ohmyfood.png" alt="logo ohmyfood">
+        </header>
+        <!-- Localisation -->
+         <form method="get" action="rechercher" class="location-banner">
+            <i class="fa-solid fa-location-dot location-banner__icon"></i>
+            <input class="location-banner__txt" type="text" placeholder="Paris, Belleville" required>
+        </form>
+
+        <!-- Headline -->
+        <div class="headline">        
+            <h1 class="headline__title title">Réservez le menu qui vous convient</h1>
+            <p class="headline__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+            <div>
+                <button class="btn btn-main">Explorer nos restaurants</button>
+            </div>
+        </div>
+
+        <!-- Fonctionnement menu -->
+        <div class="cta-container">
+            <div class="cta-container__title">
+                <h1 class="title">Fonctionnement</h1>
+            </div>
+            <div class="cta-menu">
+                <div class="cta-menu__btn" >
+                    <a class="cta-menu__btn__content" href="#">
+                        <img class="cta-menu__btn__step-icon" src="icons/N°1.svg" alt="">
+                        <img class="cta-menu__btn__icon" src="icons/mobile-screen-button.svg" alt="">
+                        <h3 class="cta-menu__btn__txt">Choisissez un restaurant</h3>  
+                    </a>       
+                </div>
+                <div class="cta-menu__btn" >
+                    <a class="cta-menu__btn__content" href="#">
+                        <img class="cta-menu__btn__step-icon" src="icons/N°2.svg" alt="">
+                        <img class="cta-menu__btn__icon" src="icons/list-ul.svg" alt="">
+                        <h3 class="cta-menu__btn__txt">Composez votre menu</h3>  
+                    </a>       
+                </div>
+                <div class="cta-menu__btn" >
+                    <a class="cta-menu__btn__content" href="#">
+                        <img class="cta-menu__btn__step-icon" src="icons/N°3.svg" alt="">
+                        <img class="cta-menu__btn__icon" src="icons/store.svg" alt="">
+                        <h3 class="cta-menu__btn__txt">Dégustez au restaurant</h3>  
+                    </a>       
+                </div>
+            </div>
+        </div>
+        
+        <!-- Les Restaurants -->
+        <div id="restaurants" class="restaurants-container">
+            <section class="restaurants">
+                <h2 class="restaurants__title">Restaurants</h2>
+                <div class="cards-container">
+                    <article class="card">
+                        <div class="card__img-wrapper">
+                            <a href="pages_restaurants/la_palette_du_gout.html">
+                                <img class="card__img" src="images/restaurants/la-palette-du-gout.jpg" alt="Un plat du restaurant">
+                                <div class="card__badge">Nouveau</div>
+                            </a>
+                        </div> 
+                        <div class="card__content">
+                            <h3 class="card__content__title">La palette du goût</h3>
+                            <p class="card__content__subtitle">Ménilmontant</p>
+                                
+                            <input type="checkbox" id="like-card1" class="card__like__input" hidden />
+                            <label for="like-card1" class="card__like"></label>
+                        </div>       
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card__img-wrapper">
+                            <a href="pages_restaurants/la_note_enchantee.html">
+                                <img class="card__img" src="images/restaurants/la-note-enchantee.jpg" alt="Un plat du restaurant">
+                                <div class="card__badge">Nouveau</div>
+                            </a>
+                        </div> 
+                        <div class="card__content">
+                            <h3 class="card__content__title">La note enchantée</h3>
+                            <p class="card__content__subtitle">Charonnne</p>
+                                
+                            <input type="checkbox" id="like-card2" class="card__like__input" hidden />
+                            <label for="like-card2" class="card__like"></label>
+                        </div>                     
+                    </article>
+                
+                    <article class="card">
+                        <div class="card__img-wrapper">
+                            <a href="pages_restaurants/a_la_française.html">
+                                <img class="card__img" src="images/restaurants/a-la-française.jpg" alt="Un plat du restaurant">
+                            </a>
+                        </div> 
+                        <div class="card__content">
+                            <h3 class="card__content__title">À la française</h3>
+                            <p class="card__content__subtitle">Cité Rouge</p>
+
+                            <input type="checkbox" id="like-card3" class="card__like__input" hidden />
+                            <label for="like-card3" class="card__like"></label>
+                        </div>                      
+                    </article>
+                    
+                    <article class="card">
+                        <div class="card__img-wrapper">
+                            <a href="pages_restaurants/le_delice_des_sens.html">
+                                <img class="card__img" src="images/restaurants/le-delice-des-sens.jpg" alt="Un plat du restaurant">
+                            </a>
+                        </div> 
+                        <div class="card__content">
+                            <h3 class="card__content__title">Le délice des sens</h3>
+                            <p class="card__content__subtitle">Folie-Méricourt</p>
+
+                            <input type="checkbox" id="like-card4" class="card__like__input" hidden />
+                            <label for="like-card4" class="card__like"></label>
+                        </div>                    
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <img class="main-footer__logo" src="icons/ohmyfood.svg" alt="logo OhMyFood">
+            <nav class="main-footer__nav">
+                <a class="main-footer__nav__content" href="#">
+                    <i class="fa-solid fa-utensils main-footer__nav__icon"></i> 
+                    <p class="main-footer__nav__content__txt">Proposer un restaurant</p>
+                </a>
+                <a class="main-footer__nav__content" href="#">
+                    <i class="fa-solid fa-handshake-angle main-footer__nav__icon"></i>
+                    <p class="main-footer__nav__content__txt">Devenir partenaire</p>
+                </a>
+                <a class="main-footer__nav__content" href="#">
+                    <p class="main-footer__nav__content__txt">Mentions légales</p>
+                </a>
+                <a class="main-footer__nav__content" href="mailto:adresse@email.com"> 
+                    <p class="main-footer__nav__content__txt">Contact</p>
+                </a>
+            </nav>       
+        </footer>
+    </main>
+</body>
+</html>

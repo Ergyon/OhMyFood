@@ -1,0 +1,127 @@
+// Couleurs
+$maincolor: linear-gradient(rgba(255,121,218,1), rgba(147,86,220,1));
+$bg-prim-color: rgba(255,255,255,1);
+$bg-sec-color: rgba(246, 246, 246, 1);
+$location_banner-color: rgba(234, 234, 234, 1);
+$footer-color: rgba(53, 53, 53, 1);
+$menu-underline-color: rgba(153, 226, 208, 1);
+$badge-color : rgba(153, 226, 208, 1);
+$badge-txt: rgba(0, 135, 102, 1);
+$like-border: rgba(147, 86, 220, 1);
+$menu-checked-color: rgba(153, 226, 208, 1);
+// Textes
+$title-size: 1.7rem;
+$title-restaurant-size: 1.9rem;
+$subtitle-size: 1.1rem;
+$subtitle-restaurant: 1.06rem;
+$btn-txt: 1rem;
+// Shadows
+$btn-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+$card-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1);
+
+
+// Mixins
+@mixin flex-center-rows {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-center-columns {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin btn {
+    height: 3.5rem;
+    background: $maincolor;
+    color: white;
+    font-size: $btn-txt;
+    border: none;
+    border-radius: 30px;
+    box-shadow: $btn-shadow;
+}
+@mixin menu-btn-hover {
+    box-shadow: $card-shadow;
+    transform: scale(98%);
+}
+
+
+// Keyframes
+// *** loader ***
+@keyframes showBody {
+    0% {
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.2;
+    }
+    50% {
+        opacity: 0.4;
+    }
+    70% {
+        opacity: 0.6;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes disappear {
+    to {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+// *** Badge new ***
+@keyframes fallingTop {
+    0% {
+        transform: translateY(-70%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateY(0);
+        opacity: 0.2;
+    }
+    40% {
+        transform: translateY(-30%);
+        opacity: 0.3;
+    }
+    60% {
+        transform: translateY(0);
+        opacity: 0.5;
+    }
+    80% {
+        transform: translateY(-10%);
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+// *** Carousels ***
+@keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+//   *** carousel section plats delay ***
+        @for $i from 1 through 15 {
+            .menu__wrapper > .menu__check-wrapper:nth-child(#{$i}) .menu__card {
+            animation: fadeInUp 1s ease-out forwards 2s;
+            animation-delay: #{($i - 1) * 0.4}s;
+            }
+        }

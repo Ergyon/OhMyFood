@@ -1,0 +1,208 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Shrikhand&display=swap");
+@keyframes showBody {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  70% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes disappear {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes fallingTop {
+  0% {
+    transform: translateY(-70%);
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 0.2;
+  }
+  40% {
+    transform: translateY(-30%);
+    opacity: 0.3;
+  }
+  60% {
+    transform: translateY(0);
+    opacity: 0.5;
+  }
+  80% {
+    transform: translateY(-10%);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.menu__wrapper > .menu__check-wrapper:nth-child(1) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 0s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(2) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 0.4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(3) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 0.8s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(4) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 1.2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(5) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 1.6s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(6) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(7) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 2.4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(8) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 2.8s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(9) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 3.2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(10) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 3.6s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(11) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(12) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4.4s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(13) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 4.8s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(14) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 5.2s;
+}
+
+.menu__wrapper > .menu__check-wrapper:nth-child(15) .menu__card {
+  animation: fadeInUp 1s ease-out forwards 2s;
+  animation-delay: 5.6s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.loader-container {
+  position: fixed;
+  inset: 0;
+  background: rgb(246, 246, 246);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 5;
+  animation: disappear 0.3s ease-in-out 2s forwards;
+}
+.loader-container .loader {
+  width: 3rem;
+  height: 3rem;
+  background: linear-gradient(rgb(255, 121, 218), rgb(147, 86, 220));
+  opacity: 0.5;
+  border: 3px solid rgb(255, 255, 255);
+  border-top: 3px solid rgb(147, 86, 220);
+  border-radius: 100%;
+  animation: spin 2s linear infinite;
+}
+
+.main-global {
+  opacity: 0;
+  animation: showBody 0.3s ease-in-out 2s forwards;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+body a {
+  text-decoration: none;
+}
+
+.main-footer {
+  background: rgb(53, 53, 53);
+  padding: 1.6rem;
+}
+.main-footer__logo {
+  color: rgb(246, 246, 246);
+  width: 8.5rem;
+  height: auto;
+}
+.main-footer__nav {
+  height: 100%;
+  margin-top: 1rem;
+}
+.main-footer__nav__icon {
+  width: 1rem;
+}
+.main-footer__nav__content {
+  color: rgb(246, 246, 246);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.main-footer__nav__content__txt {
+  margin-block: 0.3rem;
+}/*# sourceMappingURL=global.css.map */
